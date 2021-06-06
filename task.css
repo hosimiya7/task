@@ -10,11 +10,13 @@
 
 }
 .task-top-img{
-  width: 42em;
-  height: 37em;
+  width: 740px;
+  height: 700px;
   margin-left: 1em;
 }
-
+.search label{
+  width: 150px;
+}
 .content{
   display: inline-block;
   width: 14em;
@@ -25,28 +27,44 @@
 .content p i{
   color: rgb(224, 78, 73);
   position: absolute;
-  top: 10px;
+  top: 90px;
   left: 15px;
   font-size: 2em;
 }
 .cercle{
   color: rgb(224, 78, 73);
   position: absolute;
-  top: 15px;
+  top: 95px;
   left: 10px;
   font-weight: bold;
 }
 
-.complete{
+.conplete-radio-text{
   background-color: rgb(255, 231, 94);
 }
-
-.incomplete{
+.inconplete-radio-text{
+  background-color: rgb(103, 221, 113);
+}
+.work-radio-text{
+  background-color: rgb(235, 130, 179);
+}
+.hobby-radio-text{
   background-color: rgb(76, 117, 179);
 }
 
-.incomplete .work{
-  background-color: rgb(175, 84, 112);
+.incomplete{
+  background-color: rgb(103, 221, 113);
+}
+
+.work{
+  background-color: rgb(235, 130, 179);
+}
+
+.hobby{
+  background-color: rgb(76, 117, 179);
+}
+.complete{
+  background-color: rgb(255, 231, 94);
 }
 
 input[type=radio] {

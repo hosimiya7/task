@@ -23,7 +23,6 @@ $desc_attr = $order === "desc" ? "checked" : "";
 
 $min_date = date("Y-m-d");
 
-$complete = $value['is_done'] === false ? "incomplete" : "complete";
 
 ?>
 
@@ -67,17 +66,17 @@ $complete = $value['is_done'] === false ? "incomplete" : "complete";
         <input type="radio" name="is_done" value="all" id="all" class="radio-btn" <?php echo $all_attr; ?>>
         <label for="all" class="radio-text">all</label>
         <input type="radio" name="is_done" value="complete" id="complete" class="radio-btn" <?php echo $complete_attr; ?>>
-        <label for="complete" class="radio-text">complete</label>
+        <label for="complete" class="radio-text conplete-radio-text">complete</label>
         <input type="radio" name="is_done" value="incomplete" id="incomplete" class="radio-btn" <?php echo $incomplete_attr; ?>>
-        <label for="incomplete" class="radio-text">incomplete</label>
+        <label for="incomplete" class="radio-text inconplete-radio-text">incomplete</label>
       </div>
       <div class="search-category">
         <input type="radio" name="category" value="category-all" id="category-all" class="radio-btn" <?php echo $category_all_attr; ?>>
         <label for="category-all" class="radio-text">all</label>
         <input type="radio" name="category" value="work" id="work" class="radio-btn" <?php echo $work_attr; ?>>
-        <label for="work" class="radio-text">work</label>
+        <label for="work" class="radio-text work-radio-text">work</label>
         <input type="radio" name="category" value="hobby" id="hobby" class="radio-btn" <?php echo $hobby_attr; ?>>
-        <label for="hobby" class="radio-text">hobby</label>
+        <label for="hobby" class="radio-text hobby-radio-text">hobby</label>
       </div>
       <div class="search-order">
         <input type="radio" name="order" value="asc" id="asc" class="radio-btn" <?php echo $asc_attr; ?>>
@@ -90,10 +89,10 @@ $complete = $value['is_done'] === false ? "incomplete" : "complete";
   </div>
   <img src="img/daruma.jpeg" alt="だるま" class="task-top-img">
   <?php foreach ($records as $key => $value) : ?>
+    <?php $complete = (bool)$value['is_done'] === false ? "incomplete" : "complete"; ?>
     <div class="task-wrapper">
      
-      <div class="content <?php if ((bool)$value['is_done'] === false) : ?>incomplete<?php else : ?>complete<?php endif; ?> 
-        <?php echo $value['category'] ?>">
+      <div class="content <?php echo $complete ?> <?php echo $value['category'] ?>">
 
         <p> <?php //echo htmlspecialchars($value['category']); 
             ?> </p>
