@@ -110,6 +110,10 @@ input[type=radio] {
   width: 10px;
 }
 
+.desc-text{
+  margin-left: 9.7em;
+}
+
 input[type=radio]:checked+.radio-text::before {
   border-color: #666;
 }
@@ -130,6 +134,7 @@ input[type=radio]:checked+.radio-text::after {
 .button-decoration:hover {
   box-shadow: inset 0 10px 25px 0 rgb(255, 192, 17);
 }
+
 
 .registration {
   margin: 2em;
@@ -155,4 +160,8 @@ form textarea {
 
 .search {
   margin: 2em;
+}
+
+.task{
+  margin-bottom: 2em;
 }
